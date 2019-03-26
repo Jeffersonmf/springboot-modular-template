@@ -1,0 +1,15 @@
+/Users/jefferson/Projects/SatanDare/springboot-modular-template/core/src/main/java/br/com/santander/telemetria/core/repository/TelemetriaRepository.java
+/Users/jefferson/Projects/SatanDare/springboot-modular-template/core/src/main/java/br/com/santander/telemetria/core/controller/TelemetriaController.java
+/Users/jefferson/Projects/SatanDare/springboot-modular-template/core/src/main/java/br/com/santander/telemetria/core/events/TelemetriaParserEvents.java
+/Users/jefferson/Projects/SatanDare/springboot-modular-template/core/src/main/java/br/com/santander/telemetria/core/domain/TelemetriaLite.java
+/Users/jefferson/Projects/SatanDare/springboot-modular-template/core/src/main/java/br/com/santander/telemetria/core/domain/Dispositivo.java
+/Users/jefferson/Projects/SatanDare/springboot-modular-template/core/src/main/java/br/com/santander/telemetria/core/domain/WiFiNetworksData.java
+/Users/jefferson/Projects/SatanDare/springboot-modular-template/core/src/main/java/br/com/santander/telemetria/core/utils/ETypeFormatter.java
+/Users/jefferson/Projects/SatanDare/springboot-modular-template/core/src/main/java/br/com/santander/telemetria/core/domain/Telemetria.java
+/Users/jefferson/Projects/SatanDare/springboot-modular-template/core/src/main/java/br/com/santander/telemetria/core/TelemetriaApplication.java
+/Users/jefferson/Projects/SatanDare/springboot-modular-template/core/src/main/java/br/com/santander/telemetria/core/events/TelemetriaIngestorEvents.java
+/Users/jefferson/Projects/SatanDare/springboot-modular-template/core/src/main/java/br/com/santander/telemetria/core/SwaggerConfiguration.java
+/Users/jefferson/Projects/SatanDare/springboot-modular-template/core/src/main/java/br/com/santander/telemetria/core/services/TelemetriaServices.java
+/Users/jefferson/Projects/SatanDare/springboot-modular-template/core/src/main/java/br/com/santander/telemetria/core/domain/GeoLocationInfo.java
+/Users/jefferson/Projects/SatanDare/springboot-modular-template/core/src/main/java/br/com/santander/telemetria/core/entity/TelemetriaEntity.java
+/Users/jefferson/Projects/SatanDare/springboot-modular-template/core/src/main/java/br/com/santander/telemetria/core/domain/JsonDNA.java

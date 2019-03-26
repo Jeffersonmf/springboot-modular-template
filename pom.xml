@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.1.RELEASE</version>
+    </parent>
+
+    <groupId>br.com.santander.mbj</groupId>
+    <artifactId>parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>Telemetria Parent</name>
+
+    <description>Telemetria Parent</description>
+    <url>http://www.santander.com.br/api/telemetria</url>
+    <organization>
+        <name>Santander</name>
+        <url>http://www.santander.com.br</url>
+    </organization>
+    <scm>
+        <url>https://bitbucket.truphone.com/scm/ngd/usage-query-service.git</url>
+        <connection>scm:git:git://bitbucket.truphone.com/scm/ngd/usage-query-service.git</connection>
+        <developerConnection>scm:git:ssh://git@bitbucket.truphone.com/scm/ngd/usage-query-service.git
+        </developerConnection>
+    </scm>
+    <issueManagement>
+        <system>Jira</system>
+        <url>https://portal.truphone.com/jira/browse/NGD</url>
+    </issueManagement>
+    <ciManagement>
+        <system>Jenkins</system>
+        <url>https://itldngjk01.truphone.com:8080/job/NGD</url>
+    </ciManagement>
+
+    <developers>
+        <developer>
+            <name>Jefferson Marchetti Ferreira</name>
+            <email>jefferson.marchetti@ibm.com</email>
+        </developer>
+
+        <developer>
+            <name>Danilo Fernandes Nascimento Moreira</name>
+            <email>danilo.moreira@santander.com.br</email>
+        </developer>
+    </developers>
+
+    <modules>
+        <module>api</module>
+        <module>core</module>
+        <module>infrastructure</module>
+    </modules>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <spring-cloud-build.version>1.3.5.RELEASE</spring-cloud-build.version>
+        <springfox.version>2.7.0</springfox.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+
+            <!-- Springfox -->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${springfox.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${springfox.version}</version>
+            </dependency>
+
+            <!-- Project Lombok -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.16.20</version>
+                <scope>provided</scope>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <!-- Essa configuração será utilizada pelo CI para fazer upload dos artefatos
+             gerados (*.war, *.jar, *.ear, etc.) para o repositório de artefatos (atualmente,
+             Nexus 3) -->
+    <distributionManagement>
+        <repository>
+            <id>santander-release-repo</id>
+            <url>${env.NEXUS_ADDRESS}/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>santander-snapshots-repo</id>
+            <url>${env.NEXUS_ADDRESS}/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>checkstyle-validation</id>
+                        <configuration>
+                            <skip>true</skip>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>animal-sniffer-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>enforce-java-6</id>
+                        <phase>test</phase>
+                        <configuration>
+                            <skip>true</skip>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

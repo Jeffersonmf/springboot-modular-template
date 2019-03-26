@@ -1,0 +1,5 @@
+br/com/santander/telemetria/api/v1_0/dto/TelemetriaResponse.class
+br/com/santander/telemetria/api/v1_0/TelemetriaAPI.class
+br/com/santander/telemetria/api/v1_0/dto/TelemetriaRequest$TelemetriaRequestBuilder.class
+br/com/santander/telemetria/api/v1_0/dto/TelemetriaRequest.class
+br/com/santander/telemetria/api/v1_0/dto/TelemetriaResponse$TelemetriaResponseBuilder.class

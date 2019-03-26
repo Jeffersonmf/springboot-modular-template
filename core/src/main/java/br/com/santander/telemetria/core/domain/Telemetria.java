@@ -1,0 +1,85 @@
+package br.com.santander.telemetria.core.domain;
+
+import lombok.*;
+import lombok.experimental.Wither;
+
+import java.util.List;
+
+@Wither @AllArgsConstructor @NoArgsConstructor @Builder @Getter @Setter
+public class Telemetria {
+
+    private String banco;
+    private String agencia;
+    private String conta;
+    private String nomeUsuario;
+    private String apelidoCelular;
+    private String imei;
+    private String ipCliente;
+    private String plataforma;
+    private String versaoApp;
+    private String versaoSOcelular;
+    private String cnpj;
+    private String idUsuario;
+    private String idUsuarioConta;
+    private String nomeEmpresa;
+    private String numeroContrato;
+    private String perfil;
+    private String pernumper;
+    private String tipoUsuario;
+    private String tipoPessoa;
+    private String tokenSessao;
+    private String tokenTransacao;
+    private String codigoEvento;
+    private String codigoServico;
+    private String valorTransFinanceira;
+    private String descDetlhTransac;
+    private String codMeioPagtoTransac;
+    private String indTransacEfetivada;
+    private String codSituTransac;
+    private String indPendTransac;
+    private String dataHoraInclusaoRegistro;
+    private String latitute;
+    private String longitude;
+    private String descricaoEvento;
+    private String descricaoServico;
+    private String connUuid;
+    private String dataHashEntrada;
+    private String dataHashSaida;
+    private String deviceTokenCookieEntrada;
+    private String deviceTokenCookieSaida;
+    private String jsonDNA;
+    private String codigoRetornoBack;
+    private String mensagemRetornoBack;
+    private String indAssinaturaPendente;
+    private String situacaoContrato;
+    private String dataUltimoAcesso;
+    private String indicadorAssinatura;
+    private String indicadorContratoPossuiCash;
+    private String indicadorMasterPrimario;
+    private String indicadorNegocioEmpresa;
+    private String indicadorPerfilMaster;
+    private List<Dispositivo> listaDispositivos;
+    private String mobileHabilitado;
+    private String nivelUsuario;
+    private String nomeMaster;
+    private String perfilAcessoUsuarioSecundario;
+    private String perfilAutorizacaoUsuarioSecundario;
+    private String seguimentoPrimarioCliente;
+    private String seguimentoSecundarioCliente;
+    private String qtdAssinaturaGeraPendencias;
+    private String qtdAssinaturasMaster;
+    private String tipoConta;
+    private String indAssinaturaEletronicaEfet;
+    private String descOperacaoExecOrquestrador;
+    private String chaveComunServicoExterno;
+    private List<Dispositivo> mapEntradaIntegracaoEntreSistemas;
+    private List<Dispositivo> mapSaidaIntegracaoEntreSistemas;
+    private String origemFluxoBack;
+    private String appKey;
+    private String contextId;
+    private String keyAgreement;
+    private String ticketHub;
+    private String idChannel;
+    private String dateContract;
+    private String modoSenha;
+}

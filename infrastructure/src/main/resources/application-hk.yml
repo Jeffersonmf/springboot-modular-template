@@ -1,0 +1,180 @@
+server.port: 30190
+server.context-path: "/telemetria"
+#
+#logging.config: "classpath:logback-spring.xml"
+#spring.jpa.hibernate.ddl-auto: "none"
+#spring.jpa.database-platform: "org.teiid.dialect.TeiidDialect"
+#spring.jpa.hibernate.naming-strategy: "org.hibernate.cfg.DefaultComponentSafeNamingStrategy"
+#
+#spring.datasource.driver-class-name: "org.teiid.jdbc.TeiidDriver"
+# Number of ms to wait before throwing an exception if no connection is available.
+spring.datasource.tomcat.max-wait: 10000
+# Maximum number of active connections that can be allocated from this pool at the same time.
+spring.datasource.tomcat.max-active: 50
+# Validate the connection before borrowing it from the pool.
+spring.datasource.tomcat.test-on-borrow: true
+
+springfox.documentation.swagger.v2.path: "/swagger.json"
+
+spring.sleuth.sampler.percentage: 1.0
+spring.sleuth.web.skipPattern: (^cleanup.*|.+favicon.*)
+application.secrets.path: "classpath:application-secrets.yml"
+
+pagination:
+  minPage: 0
+  minPageSize: 1
+  defaultPageSize: 50
+  maxPageSize: 100
+
+serviceEndpoint:
+  endpoint: "http://localhost"
+#
+#eligibility_configuration:
+#  eligibleFields4Selection:
+#    catalogues:
+#      - id
+#      - name
+#      - description
+#      - version
+#      - status
+#      - valid_for
+#      - valid_for.start_date_time
+#      - valid_for.end_date_time
+#      - available_in
+#      - available_in.code
+#      - available_in.name
+#      - product_offering_groups
+#      - product_offering_groups.id
+#      - product_offering_groups.name
+#      - product_offering_groups.type
+#      - product_offering_groups.description
+#      - product_offering_groups.min_children
+#      - product_offering_groups.max_children
+#      - product_offering_groups.childGroups
+#      - product_offering_groups.product_offerings
+#      - product_offering_groups.product_offering_inclusions
+#      - product_offering_groups.product_offering_inclusions.id
+#      - product_offering_groups.product_offering_inclusions.min_quantity
+#      - product_offering_groups.product_offering_inclusions.max_quantity
+#      - product_offering_groups.product_offering_inclusions.default_qty
+#      - product_offering_groups.product_offering_inclusions.product_offering
+#    productOfferings:
+#      - id
+#      - name
+#      - type
+#      - status
+#      - description
+#      - product_level
+#      - fixed_duration_end
+#      - duration
+#      - product_offering_agreement
+#      - product_offering_agreement.id
+#      - product_offering_agreement.name
+#      - product_offering_agreement.description
+#      - product_offering_agreement.duration.unit
+#      - product_offering_agreement.duration.value
+#      - product_offering_charges
+#      - product_offering_charges.id
+#      - product_offering_charges.name
+#      - product_offering_charges.type
+#      - product_offering_charges.price.value
+#      - product_offering_charges.price.currency
+#      - product_offering_charges.description
+#      - product_offering_charges.is_default
+#      - product_offering_charges.is_prorated
+#      - product_offering_features
+#      - product_offering_features.id
+#      - product_offering_features.name
+#      - product_offering_features.description
+#      - product_offering_allowances
+#      - product_offering_allowances.id
+#      - product_offering_allowances.type
+#      - product_offering_allowances.duration.value
+#      - product_offering_allowances.duration.unit
+#      - product_offering_allowances.usage
+#      - product_offering_allowances.fixed_duration_end
+#      - child_product_offerings
+#  eligibleFields4Filtering:
+#    catalogues:
+#      - id
+#      - name
+#      - description
+#      - version
+#      - status
+#      - valid_for
+#      - valid_for.start_date_time
+#      - valid_for.end_date_time
+#      - available_in
+#      - available_in.code
+#      - available_in.name
+#      - product_offering_groups
+#      - product_offering_groups.id
+#      - product_offering_groups.name
+#      - product_offering_groups.type
+#      - product_offering_groups.description
+#      - product_offering_groups.min_children
+#      - product_offering_groups.max_children
+#      - product_offering_groups.childGroups
+#      - product_offering_groups.product_offerings
+#      - product_offering_groups.product_offering_inclusions
+#      - product_offering_groups.product_offering_inclusions.id
+#      - product_offering_groups.product_offering_inclusions.min_quantity
+#      - product_offering_groups.product_offering_inclusions.max_quantity
+#      - product_offering_groups.product_offering_inclusions.default_qty
+#      - product_offering_groups.product_offering_inclusions.product_offering
+#    productOfferings:
+#      - id
+#      - name
+#      - type
+#      - status
+#      - description
+#      - product_level
+#      - fixed_duration_end
+#      - duration
+#      - product_offering_agreement
+#      - product_offering_agreement.id
+#      - product_offering_agreement.name
+#      - product_offering_agreement.description
+#      - product_offering_agreement.duration.unit
+#      - product_offering_agreement.duration.value
+#      - product_offering_charges
+#      - product_offering_charges.id
+#      - product_offering_charges.name
+#      - product_offering_charges.type
+#      - product_offering_charges.price.value
+#      - product_offering_charges.price.currency
+#      - product_offering_charges.description
+#      - product_offering_charges.is_default
+#      - product_offering_charges.is_prorated
+#      - product_offering_features
+#      - product_offering_features.id
+#      - product_offering_features.name
+#      - product_offering_features.description
+#      - product_offering_allowances
+#      - product_offering_allowances.id
+#      - product_offering_allowances.type
+#      - product_offering_allowances.duration.value
+#      - product_offering_allowances.duration.unit
+#      - product_offering_allowances.usage
+#      - product_offering_allowances.fixed_duration_end
+#      - child_product_offerings
+#
+#  eligibleFields4Sorting:
+#      catalogues:
+#        - id
+#        - name
+#        - description
+#        - version
+#        - status
+#        - valid_for.start_date_time
+#        - valid_for.end_date_time
+#      productOfferings:
+#        - id
+#        - name
+#        - type
+#        - description
+#        - status
+#        - product_level
+#        - fixed_duration_end
+#        - duration.unit
+#        - duration.value
